@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.workspace {
+  display: grid;
+  grid-template-columns: $sidebar-width 1fr;
+  min-height: calc(100vh - 110px);
+
+  @include respond-to('md') {
+    grid-template-columns: 1fr;
+  }
+}
+
+main {
+  padding: $space-3xl clamp(1rem, 4vw, 3rem);
+  max-width: $content-max-width;
+}
+
+.panel {
+  margin-bottom: $space-4xl;
+  scroll-margin-top: 5rem;
+}

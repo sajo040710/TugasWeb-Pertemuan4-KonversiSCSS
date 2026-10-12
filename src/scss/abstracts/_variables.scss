@@ -1,0 +1,72 @@
+// Colors
+$color-bg: #1e1e2e;
+$color-bg-panel: #262637;
+$color-bg-panel-2: #232333;
+$color-text: #cdd6f4;
+$color-muted: #8a8fa8;
+$color-accent: #94e2d5;
+$color-accent-2: #fab387;
+$color-border: #34364a;
+$color-danger: #f38ba8;
+
+$colors: (
+  'bg': $color-bg,
+  'bg-panel': $color-bg-panel,
+  'bg-panel-2': $color-bg-panel-2,
+  'text': $color-text,
+  'muted': $color-muted,
+  'accent': $color-accent,
+  'accent-2': $color-accent-2,
+  'border': $color-border,
+  'danger': $color-danger
+);
+
+// Typography
+$font-display: 'JetBrains Mono', 'Fira Code', monospace;
+$font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+$fonts: (
+  'font-display': $font-display,
+  'font-body': $font-body
+);
+
+// Spacing
+$space-3xs: 0.1rem;
+$space-2xs: 0.25rem;
+$space-xs: 0.4rem;
+$space-sm: 0.5rem;
+$space-md: 0.75rem;
+$space-lg: 1rem;
+$space-xl: 1.25rem;
+$space-2xl: 1.5rem;
+$space-3xl: 2rem;
+$space-4xl: 4rem;
+
+$spacing: (
+  '3xs': $space-3xs,
+  '2xs': $space-2xs,
+  'xs': $space-xs,
+  'sm': $space-sm,
+  'md': $space-md,
+  'lg': $space-lg,
+  'xl': $space-xl,
+  '2xl': $space-2xl,
+  '3xl': $space-3xl,
+  '4xl': $space-4xl
+);
+
+// Radius
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 10px;
+$radius-xl: 24px;
+$radius-pill: 999px;
+
+// Breakpoints
+$breakpoints: (
+  'md': 780px
+);
+
+// Layout
+$sidebar-width: 260px;
+$content-max-width: 900px;

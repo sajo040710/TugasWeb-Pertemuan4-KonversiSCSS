@@ -1,0 +1,60 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// Media query max-width berdasarkan map $breakpoints
+@mixin respond-to($name) {
+  $width: map.get($breakpoints, $name);
+
+  @if $width {
+    @media (max-width: $width) {
+      @content;
+    }
+  } @else {
+    @error 'Breakpoint `#{$name}` tidak ditemukan di $breakpoints.';
+  }
+}
+
+// Flex container shortcut
+@mixin flex($direction: row, $gap: 0, $align: stretch, $justify: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+// Font monospace untuk elemen "kode"
+@mixin mono($weight: null, $size: null) {
+  font-family: $font-display;
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $size {
+    font-size: $size;
+  }
+}
+
+// Kartu/panel dengan border
+@mixin card($bg: $color-bg-panel, $radius: $radius-lg) {
+  background: $bg;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+}
+
+// Focus ring aksesibel
+@mixin focus-ring($color: $color-accent, $width: 2px, $offset: 1px) {
+  outline: $width solid $color;
+  outline-offset: $offset;
+}
+
+// Grid auto-fit responsif
+@mixin auto-grid($min, $gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+  gap: $gap;
+}

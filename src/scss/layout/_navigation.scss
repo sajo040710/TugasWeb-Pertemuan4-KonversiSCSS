@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.tabs {
+  @include flex($gap: $space-2xs);
+  flex-wrap: wrap;
+
+  &__item {
+    @include flex($align: center, $gap: $space-xs);
+    @include mono($size: 0.85rem);
+    color: $color-muted;
+    text-decoration: none;
+    padding: $space-xs 0.7rem;
+    border-radius: $radius-md $radius-md 0 0;
+    border-bottom: 2px solid transparent;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-text;
+      border-bottom-color: $color-accent;
+      outline: none;
+    }
+  }
+
+  &__icon {
+    color: $color-accent-2;
+    font-size: 0.6rem;
+  }
+
+  @include respond-to('md') {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    order: 3;
+
+    &.is-open {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+.titlebar {
+  @include flex($align: center, $gap: $space-2xl);
+  background: $color-bg-panel-2;
+  border-bottom: 1px solid $color-border;
+  padding: $space-md $space-xl;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-wrap: wrap;
+
+  &__brand {
+    @include flex($align: center, $gap: $space-sm);
+    @include mono(700);
+    color: $color-accent;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $color-accent-2;
+  }
+
+  &__menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+
+    span {
+      width: 22px;
+      height: 2px;
+      background: $color-text;
+    }
+
+    @include respond-to('md') {
+      display: flex;
+    }
+  }
+}

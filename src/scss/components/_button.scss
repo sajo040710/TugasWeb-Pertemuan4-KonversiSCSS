@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.btn {
+  @include mono($size: 0.95rem);
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: $radius-md;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &--primary {
+    background: $color-accent;
+    color: $color-bg;
+    font-weight: 700;
+
+    &:hover {
+      background: $color-accent-2;
+    }
+
+    &:focus-visible {
+      @include focus-ring($color-text, 3px, 2px);
+    }
+  }
+}

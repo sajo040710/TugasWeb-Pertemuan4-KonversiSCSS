@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.statusbar {
+  @include mono($size: 0.8rem);
+  @include flex($gap: $space-sm, $justify: space-between);
+  background: $color-accent;
+  color: $color-bg;
+  padding: $space-sm $space-xl;
+  flex-wrap: wrap;
+
+  &__left,
+  &__right {
+    @include flex($gap: $space-lg);
+  }
+}

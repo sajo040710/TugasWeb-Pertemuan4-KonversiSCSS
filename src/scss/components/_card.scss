@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.project-card {
+  @include card;
+  margin: 0;
+  overflow: hidden;
+
+  &__thumb {
+    width: 100%;
+    display: block;
+  }
+
+  figcaption {
+    padding: $space-lg;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  p {
+    color: $color-muted;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+}

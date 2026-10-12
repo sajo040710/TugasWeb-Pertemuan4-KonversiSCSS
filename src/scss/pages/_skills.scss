@@ -1,0 +1,6 @@
+@use '../abstracts' as *;
+
+.skills {
+  @include auto-grid(200px, $space-2xl);
+  margin-top: $space-lg;
+}

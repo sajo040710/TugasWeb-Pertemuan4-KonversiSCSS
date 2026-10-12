@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// space('md') -> 0.75rem
+@function space($key) {
+  @if not map.has-key($spacing, $key) {
+    @error 'Spacing `#{$key}` tidak ada di $spacing.';
+  }
+
+  @return map.get($spacing, $key);
+}
+
+// color('accent') -> #94e2d5
+@function color($key) {
+  @if not map.has-key($colors, $key) {
+    @error 'Color `#{$key}` tidak ada di $colors.';
+  }
+
+  @return map.get($colors, $key);
+}

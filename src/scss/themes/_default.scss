@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+// Custom properties dibuat dari map SCSS supaya script.js
+// tetap bisa membaca var(--accent), var(--danger), dst.
+:root {
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+
+  @each $name, $value in $fonts {
+    --#{$name}: #{$value};
+  }
+
+  @each $name, $value in $spacing {
+    --space-#{$name}: #{$value};
+  }
+}
+
+// Utility margin-top: .u-mt-1 ... .u-mt-4
+@for $i from 1 through 4 {
+  .u-mt-#{$i} {
+    margin-top: #{$i * 0.5}rem;
+  }
+}

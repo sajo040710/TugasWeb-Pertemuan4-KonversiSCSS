@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+body {
+  margin: 0;
+  background: $color-bg;
+  color: $color-text;
+  font-family: $font-body;
+  line-height: 1.6;
+}
+
+a {
+  color: $color-accent;
+}
+
+code {
+  @include mono;
+  background: $color-bg-panel-2;
+  padding: $space-3xs $space-xs;
+  border-radius: $radius-sm;
+  color: $color-accent-2;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-display;
+  color: $color-text;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 $space-lg;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: $space-sm;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: $color-accent;
+  margin-top: $space-2xl;
+}
+
+.eyebrow {
+  @include mono($size: 0.85rem);
+  color: $color-accent-2;
+  margin: 0 0 $space-sm;
+}

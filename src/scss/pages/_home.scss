@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.hero {
+  &__subtitle {
+    color: $color-muted;
+    max-width: 55ch;
+  }
+
+  &__avatar-figure {
+    margin: $space-2xl 0;
+    max-width: 200px;
+
+    figcaption {
+      font-size: 0.8rem;
+      color: $color-muted;
+      margin-top: $space-sm;
+    }
+  }
+
+  &__avatar {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: $radius-xl;
+    display: block;
+  }
+}
+
+.cursor {
+  color: $color-accent;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

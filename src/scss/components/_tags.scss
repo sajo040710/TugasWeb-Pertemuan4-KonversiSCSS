@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+.tags {
+  @include flex($gap: $space-sm);
+  list-style: none;
+  padding: 0;
+  margin: $space-sm 0 0;
+  flex-wrap: wrap;
+
+  li {
+    background: $color-bg-panel;
+    border: 1px solid $color-border;
+    padding: 0.3rem 0.7rem;
+    border-radius: $radius-pill;
+    font-size: 0.85rem;
+  }
+}

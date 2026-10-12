@@ -1,0 +1,6 @@
+@use '../abstracts' as *;
+
+.projects {
+  @include auto-grid(240px, $space-2xl);
+  margin-top: $space-2xl;
+}

@@ -1,0 +1,61 @@
+@use '../abstracts' as *;
+
+label {
+  font-size: 0.85rem;
+  color: $color-muted;
+}
+
+input,
+select,
+textarea {
+  background: $color-bg-panel;
+  border: 1px solid $color-border;
+  color: $color-text;
+  padding: 0.6rem $space-md;
+  border-radius: $radius-md;
+  font-family: $font-body;
+  font-size: 0.95rem;
+
+  &:focus {
+    @include focus-ring;
+  }
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: $color-danger;
+}
+
+.form {
+  max-width: 480px;
+  margin-top: $space-2xl;
+
+  &__row {
+    @include flex(column, $space-xs);
+    margin-bottom: 1.1rem;
+  }
+
+  &__row--split {
+    flex-direction: row;
+    gap: $space-2xl;
+
+    > div {
+      @include flex(column, $space-xs);
+      flex: 1;
+    }
+
+    @include respond-to('md') {
+      flex-direction: column;
+    }
+  }
+
+  &__hint {
+    font-size: 0.8rem;
+    color: $color-danger;
+    min-height: 1em;
+  }
+
+  &__status {
+    font-size: 0.9rem;
+    color: $color-accent;
+  }
+}

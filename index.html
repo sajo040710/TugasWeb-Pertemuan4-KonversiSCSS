@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joses Sitohang — Landing Page Pribadi</title>
+  <meta name="description" content="Landing page pribadi Joses Sitohang, mahasiswa Universitas Negeri Medan yang sedang mempelajari pemrograman Java, aljabar linear, statistika, kimia, dan biologi.">
+  <meta name="author" content="Joses Sitohang">
+
+  <!-- Open Graph meta tags (bonus) -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Joses Sitohang — Landing Page Pribadi">
+  <meta property="og:description" content="Mahasiswa Universitas Negeri Medan. Sedang belajar Java OOP, aljabar linear, statistika, kimia, dan biologi.">
+  <meta property="og:image" content="https://placehold.co/1200x630/1e1e2e/94e2d5?text=Joses+Sitohang">
+  <meta property="og:url" content="https://example.com/">
+
+  </head>
+<body>
+
+  <header class="titlebar">
+    <div class="titlebar__brand">
+      <span class="titlebar__dot" aria-hidden="true"></span>
+      <span class="titlebar__logo">&lt;/Joses&gt;</span>
+    </div>
+
+    <nav class="tabs" id="tabsNav" aria-label="Navigasi utama">
+      <a class="tabs__item" href="#beranda"><span class="tabs__icon" aria-hidden="true">◆</span>beranda.html</a>
+      <a class="tabs__item" href="#tentang"><span class="tabs__icon" aria-hidden="true">◆</span>tentang.md</a>
+      <a class="tabs__item" href="#keahlian"><span class="tabs__icon" aria-hidden="true">◆</span>keahlian.json</a>
+      <a class="tabs__item" href="#proyek"><span class="tabs__icon" aria-hidden="true">◆</span>proyek.js</a>
+      <a class="tabs__item" href="#kontak"><span class="tabs__icon" aria-hidden="true">◆</span>kontak.php</a>
+    </nav>
+
+    <button class="titlebar__menu" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="tabsNav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="workspace">
+
+    <!-- Sidebar berperan sebagai file explorer + aside berisi info tambahan -->
+    <aside class="explorer" aria-label="Info singkat">
+      <p class="explorer__label">EXPLORER</p>
+      <ul class="explorer__tree">
+        <li>📁 mahasiswa-unimed
+          <ul>
+            <li>📄 NAMA: JOSES SITOHANG</li>
+            <li>📄 NIM: 4253250010</li>
+            <li>📄 KAMPUS: UNIVERSITAS NEGERI MEDAN</li>
+            <li>📄 STATUS: <span class="explorer__badge">SEDANG MENEMPUH GELAR SARJANA (S1)</span></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="explorer__panel">
+        <p class="explorer__label">SEDANG DIKERJAKAN</p>
+        <ul class="explorer__list">
+          <li>Pemrograman Berorientasi Objek — Java</li>
+          <li>Aljabar Linear</li>
+          <li>Statistika</li>
+          <li>Kimia Umum</li>
+          <li>Biologi</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main>
+
+      <!-- ============ HERO ============ -->
+      <section id="beranda" class="panel hero">
+        <p class="eyebrow">// beranda.html</p>
+        <h1 class="hero__title">Halo, saya Joses<span class="cursor" aria-hidden="true">_</span></h1>
+        <p class="hero__subtitle">Mahasiswa Universitas Negeri Medan yang sedang menekuni pemrograman, matematika, dan sains di sela-sela tugas kuliah.</p>
+
+        <figure class="hero__avatar-figure">
+          <img class="hero__avatar" src="/avatar.jpg" alt="Avatar Joses Sitohang">
+          <figcaption>Avatar pribadi.</figcaption>
+        </figure>
+
+        <a class="btn btn--primary" href="#kontak">Hubungi saya →</a>
+      </section>
+
+      <!-- ============ TENTANG ============ -->
+      <article id="tentang" class="panel">
+        <p class="eyebrow">// tentang.md</p>
+        <h2>Tentang Saya</h2>
+
+        <h3>Pendidikan</h3>
+        <p>Saat ini terdaftar sebagai mahasiswa di <strong>UNIVERSITAS NEGERI MEDAN</strong> dengan NIM <code>4253250010</code>, <strong>SEDANG MENEMPUH GELAR SARJANA (S1)</strong>. Perkuliahan membawa saya berpindah dari logika pemrograman ke ruang vektor, lalu ke uji hipotesis, sebelum kembali ke laboratorium kimia dan biologi pada hari yang sama.</p>
+
+        <h3>Minat</h3>
+        <p>Melalui latar belakang pendidikan tinggi yang sedang saya tempuh, saya berkomitmen untuk mengasah keahlian teknis dan pemahaman sistem guna mewujudkan cita-cita sebagai seorang game developer profesional yang mampu menciptakan dunia virtual dengan narasi mendalam serta pengalaman bermain yang responsif dan inovatif.</p>
+
+        <h3>Cara Belajar</h3>
+        <p>Saya suka mendengarkan pengalaman orang lain untuk belajar, terutama kesalahan dan tips yang diberikan oleh orang tersebut, kemudian saya pelajari dan mengimplementasikan ke dalam pekerjaan saya.</p>
+      </article>
+
+      <!-- ============ KEAHLIAN ============ -->
+      <section id="keahlian" class="panel">
+        <p class="eyebrow">// keahlian.json</p>
+        <h2>Keahlian &amp; Mata Kuliah</h2>
+
+        <div class="skills">
+          <div class="skills__group">
+            <h3>Pemrograman</h3>
+            <ul class="tags">
+              <li>Java OOP</li>
+              <li>HTML5 Semantik</li>
+              <li>CSS3</li>
+              <li>JavaScript dasar</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3>Matematika &amp; Statistika</h3>
+            <ul class="tags">
+              <li>Aljabar Linear</li>
+              <li>Sistem Persamaan Linear</li>
+              <li>Regresi &amp; Uji-t</li>
+              <li>ANOVA</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3>Sains</h3>
+            <ul class="tags">
+              <li>Kimia Umum</li>
+              <li>Biologi</li>
+              <li>Fisika</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROYEK ============ -->
+      <section id="proyek" class="panel">
+        <p class="eyebrow">// proyek.js</p>
+        <h2>Proyek &amp; Tugas</h2>
+        <p>Beberapa tugas kuliah yang sudah dikerjakan sejauh ini:</p>
+
+        <div class="projects">
+          <figure class="project-card">
+            <svg class="project-card__thumb" viewBox="0 0 300 160" role="img" aria-labelledby="proj1Title">
+              <title id="proj1Title">Ilustrasi modul Java OOP</title>
+              <rect width="300" height="160" fill="#1e1e2e"></rect>
+              <rect x="20" y="20" width="260" height="16" rx="4" fill="#94e2d5"></rect>
+              <rect x="20" y="48" width="180" height="10" rx="3" fill="#6c7086"></rect>
+              <rect x="20" y="66" width="220" height="10" rx="3" fill="#6c7086"></rect>
+              <rect x="20" y="84" width="140" height="10" rx="3" fill="#fab387"></rect>
+            </svg>
+            <figcaption>
+              <h3>Modul Java: Enkapsulasi &amp; Pewarisan</h3>
+              <p>Rangkaian latihan OOP mencakup enkapsulasi, pewarisan, polimorfisme, hingga koneksi JDBC ke MySQL.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="project-card">
+            <svg class="project-card__thumb" viewBox="0 0 300 160" role="img" aria-labelledby="proj2Title">
+              <title id="proj2Title">Ilustrasi grafik statistika</title>
+              <rect width="300" height="160" fill="#1e1e2e"></rect>
+              <polyline points="20,130 70,90 120,110 170,60 220,80 270,30" fill="none" stroke="#94e2d5" stroke-width="4"></polyline>
+              <circle cx="70" cy="90" r="4" fill="#fab387"></circle>
+              <circle cx="170" cy="60" r="4" fill="#fab387"></circle>
+              <circle cx="270" cy="30" r="4" fill="#fab387"></circle>
+            </svg>
+            <figcaption>
+              <h3>Analisis Statistika</h3>
+              <p>Pengolahan data dengan regresi sederhana, uji-t, dan ANOVA menggunakan SPSS.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="project-card">
+            <svg class="project-card__thumb" viewBox="0 0 300 160" role="img" aria-labelledby="proj3Title">
+              <title id="proj3Title">Ilustrasi landing page ini</title>
+              <rect width="300" height="160" fill="#1e1e2e"></rect>
+              <rect x="20" y="20" width="260" height="24" rx="4" fill="#262637" stroke="#94e2d5"></rect>
+              <rect x="20" y="56" width="120" height="84" rx="4" fill="#262637" stroke="#6c7086"></rect>
+              <rect x="152" y="56" width="128" height="84" rx="4" fill="#262637" stroke="#6c7086"></rect>
+            </svg>
+            <figcaption>
+              <h3>Landing Page Pribadi (tugas ini)</h3>
+              <p>Dibangun dengan HTML5 semantik, form interaktif, dan validasi W3C — sedang Anda lihat sekarang.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ KONTAK ============ -->
+      <section id="kontak" class="panel">
+        <p class="eyebrow">// kontak.php</p>
+        <h2>Hubungi Saya</h2>
+        <p>Punya pertanyaan seputar tugas kuliah atau sekadar ingin menyapa? Isi form di bawah ini.</p>
+
+        <form id="contactForm" class="form" novalidate>
+          <div class="form__row">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" required minlength="3" placeholder="Nama lengkap Anda">
+            <span class="form__hint" data-hint-for="nama"></span>
+          </div>
+
+          <div class="form__row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="nama@contoh.com">
+            <span class="form__hint" data-hint-for="email"></span>
+          </div>
+
+          <div class="form__row">
+            <label for="tanggal">Tanggal (opsional, kalau perlu janjian)</label>
+            <input type="date" id="tanggal" name="tanggal">
+          </div>
+
+          <div class="form__row">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="4" required minlength="10" placeholder="Tulis pesan Anda di sini..."></textarea>
+            <span class="form__hint" data-hint-for="pesan"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Kirim Pesan</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="statusbar">
+    <div class="statusbar__left">
+      <span>UTF-8</span>
+      <span>HTML5</span>
+      <span>Ln 1, Col 1</span>
+    </div>
+    <div class="statusbar__right">
+      <span id="liveClock">--:--:--</span>
+      <span>&copy; <time datetime="2026">2026</time> Joses Sitohang</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

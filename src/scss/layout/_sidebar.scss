@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+.explorer {
+  background: $color-bg-panel-2;
+  border-right: 1px solid $color-border;
+  padding: $space-xl $space-lg;
+
+  &__label {
+    @include mono($size: 0.7rem);
+    letter-spacing: 0.1em;
+    color: $color-muted;
+    margin: $space-xl 0 $space-sm;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__tree,
+  &__list {
+    list-style: none;
+    padding-left: $space-sm;
+    margin: 0;
+    font-size: 0.9rem;
+
+    li {
+      margin-bottom: $space-sm;
+      color: $color-muted;
+    }
+  }
+
+  &__tree ul {
+    list-style: none;
+    padding-left: $space-lg;
+    margin-top: $space-xs;
+  }
+
+  &__badge {
+    background: $color-accent;
+    color: $color-bg;
+    padding: 0.05rem $space-xs;
+    border-radius: $radius-sm;
+    font-size: 0.75rem;
+  }
+
+  &__panel {
+    margin-top: $space-lg;
+  }
+
+  @include respond-to('md') {
+    display: none;
+  }
+}
